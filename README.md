@@ -2,9 +2,9 @@
 A simple automated monkey testing demo using Playwright and gremlins.js written in typescript
 
 ## How to run the tests
-Be sure to have installed playwright.  If you havent already, use the following command
+First up, install the dependencies by running the below command from the root folder (where this readme is located)
 
-npm i playwright
+npm install
 
 Then from the root folder (where this readme is located) run the below command
 
