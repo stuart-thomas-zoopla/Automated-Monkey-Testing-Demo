@@ -1,0 +1,19 @@
+{
+  "name": "automonkey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.23.3"
+  },
+  "dependencies": {
+    "gremlins.js": "^2.2.0",
+    "playwright": "^1.23.4"
+  }
+}
