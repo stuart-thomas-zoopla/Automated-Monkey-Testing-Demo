@@ -1,0 +1,23 @@
+name: Testing
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  ui-monkey-tests:
+    name: UI Monkey Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+      - name: Install dependencies
+        uses: ./.github/actions/install-dependencies
+      - name: Run Monkey Tests
+        run: npx playwright test
