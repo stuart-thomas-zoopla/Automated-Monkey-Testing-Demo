@@ -6,20 +6,14 @@ on:
 
 jobs:
   Install-Dependencies:
-    name: Install Dependencies
+    name: Install and Run
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: bahmutov/npm-install@v1
-      - name: npm t
-        run: npm t
-
-  ui-monkey-tests:
-    name: UI Monkey Tests
-    needs: [Install-Dependencies]
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: bahmutov/npm-install@v1
+      - name: npm t
+        run: npm t
       - name: Run Monkey Tests
         run: npx playwright test
