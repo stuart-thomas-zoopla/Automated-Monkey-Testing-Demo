@@ -11,7 +11,7 @@
     "licensing": {
       "libraries": : [{
         "library": {
-            "language": "javascript",                                                     
+            "language": "nodejs",                                                     
             "name": "automonkey"
         },
         "version": "*",
