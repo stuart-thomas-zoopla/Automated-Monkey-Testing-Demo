@@ -1,7 +1,10 @@
 name: Testing
 
 on:
-  push:
+  pull_request:
+    paths:
+      - '**/*.ts'
+      - '**/*.json'
 
 jobs:
   Install-Dependencies:
