@@ -1,0 +1,22 @@
+{
+  "exclusions": {
+    "security": {
+      "cves": [],
+      "advices": [],
+      "libraries": []
+    },
+    "stability": {
+      "libraries": []
+    },
+    "licensing": {
+      "libraries": : [{
+        "library": {
+            "language": "javascript",                                                     
+            "name": "automonkey"
+        },
+        "version": "*",
+        "description": "Internal library so license is implied"
+    }]
+    }
+  }
+}
