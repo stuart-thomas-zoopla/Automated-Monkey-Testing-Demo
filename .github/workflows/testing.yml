@@ -2,7 +2,9 @@ name: Testing
 
 on:
   pull_request:
-    branches: [main]
+    paths:
+      - '**/*.ts'
+      - '**/*.json'
 
 jobs:
   Install-Dependencies:
