@@ -1,7 +1,6 @@
 name: Testing
 
 on:
-  pull_request:
   push:
 
 jobs:
@@ -15,11 +14,3 @@ jobs:
       - uses: bahmutov/npm-install@v1
       - name: Run Monkey Tests
         run: npx playwright test
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: typescript
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
